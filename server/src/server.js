@@ -1,6 +1,13 @@
 import { MongoClient, ServerApiVersion } from 'mongodb';
-import app from './app.js';
 import dotenv from 'dotenv';
+import express from 'express';
+import cors from 'cors';
+import { elevatorApi } from './elevator.js';
+
+const app = express();
+
+app.use(cors());
+app.use(express.json());
 
 
 dotenv.config();
@@ -18,20 +25,25 @@ const client = new MongoClient(uri, {
   }
 });
 
-async function run() {
+const dbInitialization = async()=> {
   try {
     // Connect the client to the server	(optional starting in v4.7)
     await client.connect();
     // Send a ping to confirm a successful connection
     await client.db("admin").command({ ping: 1 });
     console.log("Pinged your deployment. You successfully connected to MongoDB!");
-    
+
     app.listen(port, () => {
-        console.log(`Server is running at port ${port}`);
+      console.log(`Server is running at port ${port}`);
     })
+
+    elevatorApi(client, app)
+    
+
   } finally {
     // Ensures that the client will close when you finish/error
     //await client.close();
   }
 }
-run().catch(console.dir);
+dbInitialization().catch(console.dir);
+
