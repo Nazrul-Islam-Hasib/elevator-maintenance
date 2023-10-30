@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
     const navOptions =
@@ -17,19 +18,20 @@ const Navbar = () => {
                         {navOptions}
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">Elevator</a>
+                <Link className='btn btn-ghost normal-case text-xl' to="/">Elevator</Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
                     {navOptions}
                 </ul>
+                <Link className='btn btn-ghost normal-case text-xl' to="/login">Login</Link>
             </div>
             <div className="navbar-end">
                 <div className="avatar">
                     <div className="w-8 rounded-full rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                        
                     </div>
                 </div>
+                
             </div>
         </div>
     );
