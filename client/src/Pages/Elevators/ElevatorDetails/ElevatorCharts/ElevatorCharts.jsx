@@ -9,8 +9,6 @@ const ElevatorCharts = ({ chartData }) => {
         formattedTime: formatDate(new Date(item.time)),
     }));
 
-    console.log(chartDataWithDates);
-
     return (
         <BarChart
             width={1000}

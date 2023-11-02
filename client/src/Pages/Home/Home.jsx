@@ -8,8 +8,6 @@ const Home = () => {
     const [outOfOrderElevator, setOutOfOrderElevator] = useState([]);
     const [warningElevator, setWarningElevator] = useState([]);
     const { user, isAuthenticated, isLoading } = useAuth0();
-
-
     useEffect(() => {
         if (isAuthenticated) {
             axios.get(`http://localhost:8000/api/v1/users/${user.email}`)
@@ -47,13 +45,19 @@ const Home = () => {
         <div className="hero my-8">
             <div className="hero-content text-center flow-root">
                 {isAuthenticated ?
+                <div data-testid="elevator-counter">
                     <ElevatorCounter
                         operationalElevator={operationalElevator}
                         warningElevator={warningElevator}
                         outOfOrderElevator={outOfOrderElevator}>
                     </ElevatorCounter>
+                </div>
+                    
                     :
+
+                    <div data-testid="sign-in">
                     <SignIn></SignIn>
+                    </div>
                 }
             </div>
         </div>

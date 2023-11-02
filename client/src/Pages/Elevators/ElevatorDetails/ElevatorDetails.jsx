@@ -32,7 +32,7 @@ const ElevatorDetails = () => {
             </div>
             <div className="hero">
                 <div className="hero-content text-center">
-                    {chartData.length > 0 && <ElevatorCharts key={elevatorData._id} chartData={chartData}></ElevatorCharts>}
+                    {chartData.length > 0 && <div data-testid="elevator-charts"><ElevatorCharts key={elevatorData._id} chartData={chartData}></ElevatorCharts></div>}
                 </div>
             </div>
         </div>
