@@ -8,7 +8,7 @@ const getAllElevators: RequestHandler =
         res.send({
             statusCode: httpStatus.OK,
             success: true,
-            message: "Data retrived successfully!",
+            message: "Eelvators retrived successfully!",
             data: result
         });
     }
@@ -19,7 +19,7 @@ const getElevatorsByUser : RequestHandler =
         console.log(result.length)
         if(result.length<1){
             res.send({
-                statusCode: httpStatus[204],
+                statusCode: httpStatus.NO_CONTENT,
                 success: true,
                 message: "No data Available for the user!",
                 data: result
