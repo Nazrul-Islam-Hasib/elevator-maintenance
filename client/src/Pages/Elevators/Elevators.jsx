@@ -13,7 +13,7 @@ const Elevators = () => {
         elevatorData = location.state.operationalElevator
     }
     return (
-        <div>
+        <div className="my-8">
             <div className="overflow-x-auto">
                 <table className="table">
                     <thead>

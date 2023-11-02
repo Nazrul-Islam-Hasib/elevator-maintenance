@@ -1,11 +1,10 @@
 import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
 import LogOut from "../../LogOut/LogOut.Jsx";
-import SignIn from "../../SignIn/SignIn";
+import SignInButton from "../../SignIn/SignInButton/SignInButton";
 
 const Navbar = () => {
     const { user, isAuthenticated, isLoading } = useAuth0();
-
     if (isLoading) {
         return <div>Loading ...</div>;
     }
@@ -33,7 +32,7 @@ const Navbar = () => {
                                     <li><LogOut></LogOut></li>
                                 </ul>
                             </>
-                        ) : <SignIn></SignIn>
+                        ) : <SignInButton></SignInButton>
                     }
 
                 </div>

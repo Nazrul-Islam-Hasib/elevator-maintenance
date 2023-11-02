@@ -10,45 +10,20 @@ const ElevatorDetails = () => {
     return (
 
         <div>
-            {/* <div className="overflow-x-auto">
-                <table className="table">
-                    <thead>
-                        <tr>
-                            <th>deviceIdentificationNumber</th>
-                            <th>manufacturerName</th>
-                            <th>productionYear</th>
-                            <th>elevatorType</th>
-                            <th>state</th>
-                            {elevatorData.warningMessage && <th>warningMessage</th>}
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr
-                            key={elevatorData._id}
-                            className="hover">
-                            <td>{elevatorData.deviceIdentificationNumber}</td>
-                            <td>{elevatorData.manufacturerName}</td>
-                            <td>{elevatorData.productionYear}</td>
-                            <td>{elevatorData.elevatorType}</td>
-                            <td>{elevatorData.state}</td>
-                            {elevatorData.warningMessage && <td>{elevatorData.warningMessage}</td>}
-                        </tr>
-                    </tbody>
-                </table>
-            </div> */}
-            <div className="hero">
+            <div className="hero my-8">
                 <div className="hero-content text-center">
                     <div className="max-w-md">
-                        <div className="card w-96 bg-base-100 shadow-xl">
+                        <div className="card w-96 shadow-xl bg-base-200">
                             <div className="card-body items-center text-center">
                                 <h2 className="card-title">Elevator details</h2>
                                 <ul>
-                                    <li>deviceIdentificationNumber : {elevatorData.deviceIdentificationNumber}</li>
-                                    <li>manufacturerName : {elevatorData.manufacturerName}</li>
-                                    <li>productionYear : {elevatorData.productionYear}</li>
-                                    <li>elevatorType : {elevatorData.elevatorType}</li>
-                                    <li>state : {elevatorData.state}</li>
-                                    {elevatorData.warningMessage && <li>warningMessage : {elevatorData.warningMessage}</li>}
+                                    <li>DeviceIdentificationNumber : {elevatorData.deviceIdentificationNumber}</li>
+                                    <li>ManufacturerName : {elevatorData.manufacturerName}</li>
+                                    <li>ProductionYear : {elevatorData.productionYear}</li>
+                                    <li>ElevatorType : {elevatorData.elevatorType}</li>
+                                    <li>State : {elevatorData.state}</li>
+                                    {elevatorData.warningMessage && <li>WarningMessage : {elevatorData.warningMessage}</li>}
+                                    {elevatorData.reason && <li>Reason : {elevatorData.reason}</li>}
                                 </ul>
                             </div>
                         </div>
@@ -57,7 +32,7 @@ const ElevatorDetails = () => {
             </div>
             <div className="hero">
                 <div className="hero-content text-center">
-                    {chartData && <ElevatorCharts key={elevatorData._id} chartData={chartData}></ElevatorCharts>}
+                    {chartData.length > 0 && <ElevatorCharts key={elevatorData._id} chartData={chartData}></ElevatorCharts>}
                 </div>
             </div>
         </div>
