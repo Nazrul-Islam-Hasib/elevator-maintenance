@@ -42,6 +42,13 @@ This project for a smart elevator maintenance company is built using React, Expr
 
 - **Intuitive UI:** User-friendly and easy-to-navigate interface.
 
+## Demo User
+
+Use this demo user to access the app.
+
+- **User 1:** email- test1@email.com , password - Test@123
+- **User 2:** email- test2@email.com, password - Test@321
+
 ## Local Setup for Client-Side Application
 
 Follow these concise steps to set up and run the client-side application locally.
