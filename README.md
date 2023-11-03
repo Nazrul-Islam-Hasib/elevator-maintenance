@@ -8,6 +8,7 @@ This project for a smart elevator maintenance company is built using React, Expr
 - React
 - Tailwind CSS
 - DaisiUI
+- Reccharts
 
 ### Server Side:
 - NodeJS
