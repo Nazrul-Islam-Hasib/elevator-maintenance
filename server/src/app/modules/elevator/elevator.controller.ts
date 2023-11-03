@@ -16,7 +16,6 @@ const getAllElevators: RequestHandler =
 const getElevatorsByUser : RequestHandler = 
     async (req:Request, res: Response) => {
         const result = await ElevatorService.getElevatorsByUser(req.params.email)
-        console.log(result.length)
         if(result.length<1){
             res.send({
                 statusCode: httpStatus.NO_CONTENT,
