@@ -41,7 +41,7 @@ This project for a smart elevator maintenance company is built using React, Expr
 
 - **Intuitive UI:** User-friendly and easy-to-navigate interface.
 
-### Local Setup for Client-Side Application
+## Local Setup for Client-Side Application
 
 Follow these concise steps to set up and run the client-side application locally.
 
@@ -87,7 +87,7 @@ Follow these concise steps to set up and run the client-side application locally
 
    Find the production code in the `dist` directory.
 
-### Local Setup for Server-side Application
+## Local Setup for Server-side Application
 
 Follow these concise steps to set up and run the server-side application locally.
 
@@ -122,3 +122,11 @@ Follow these concise steps to set up and run the server-side application locally
 6. **For testing:**
 
    npm test
+
+
+## More specific documentation
+
+### Go to server folder to find details about API endpoint and database schema
+
+### Go to client folder to find details about the fronend components
+
